@@ -31,7 +31,6 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-
     needs: build
 
     steps:
@@ -39,4 +38,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: pp
-          run: ls -l
+        
+      - name: debug
+        run: ls -l
