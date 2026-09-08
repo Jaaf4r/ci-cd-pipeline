@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if diff <(./pp) <(echo -n "alo test\n") > /dev/null; then
+if diff <(./pp) <(echo "alo test") > /dev/null; then
     echo "✅ Match!"
 	exit 0
 else
