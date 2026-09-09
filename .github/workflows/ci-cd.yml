@@ -47,4 +47,5 @@ jobs:
       - name: Verify deployment
         run: |
           ls -l fake-server
+          chmod +x fake-server/pp
           ./fake-server/pp
