@@ -39,5 +39,12 @@ jobs:
         with:
           name: pp
         
-      - name: debug
-        run: ls -l
+      - name: Deploy
+        run: |
+          mkdir -p fake-server
+          cp pp fake-server/pp
+
+      - name: Verify deployment
+        run: |
+          ls -l fake-server
+          ./fake-server/pp
