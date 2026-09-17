@@ -13,6 +13,9 @@ $(NAME): $(OBJ)
 
 all: $(NAME)
 
+test: $(NAME)
+		./test.sh
+
 clean:
 		rm -f $(OBJ)
 
@@ -21,4 +24,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re test

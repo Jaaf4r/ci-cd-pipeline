@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+
     steps:
       - name: Get the code
         uses: actions/checkout@v4
@@ -17,4 +20,4 @@ jobs:
         run: make
 
       - name: test
-        run: ./test.sh
+        run: make test
